@@ -1,223 +1,309 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rénovation d’une salle de bain — LFB Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformation d’une salle de bain — LFB Studio</title>
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 :root{
-  --warm-white:#f6f1e8;
-  --text-dark:#1a1a1a;
-  --muted:rgba(26,26,26,0.70);
-  --border:rgba(26,26,26,0.12);
+    --background:#faf5e6;
+    --text:#2b2b2b;
+    --terracotta:#94471D;
+    --border:#e7ddc9;
 }
 
 body{
-  font-family: Helvetica, Arial, sans-serif;
-  background: var(--warm-white);
-  color: var(--text-dark);
+    font-family:Helvetica, Arial, sans-serif;
+    background:var(--background);
+    color:var(--text);
 }
 
 /* HEADER */
+
 header{
-  position: sticky;
-  top:0;
-  width:100%;
-  padding:22px 50px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background: rgba(246,241,232,0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(250,245,230,0.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 50px;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  color: var(--text-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
 .logo-small{
-  width:30px;
+    width:45px;
+    height:auto;
+}
+
+.brand-name{
+    color:var(--terracotta);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:0.9rem;
 }
 
 nav a{
-  margin-left:26px;
-  text-decoration:none;
-  color: var(--text-dark);
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.85;
-  transition: opacity .2s ease;
+    text-decoration:none;
+    color:rgba(26,26,26,0.80);
+    margin-left:28px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:0.85rem;
+    transition:.2s;
 }
 
-nav a:hover{ opacity: 0.55; }
+nav a:hover{
+    opacity:.6;
+}
 
 /* PAGE */
+
 main{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 70px 50px 120px;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 50px 120px;
 }
 
 h1{
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
-  font-size: 2rem;
+    font-family:Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-weight:400;
+    font-size:2.5rem;
+    margin-bottom:50px;
 }
 
-/* LAYOUT principal */
+/* SECTION HAUTE */
+
 .top-layout{
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: start;
-  margin-bottom: 70px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:60px;
+    align-items:start;
+    margin-bottom:80px;
 }
 
 .desc p{
-  line-height: 1.75;
-  color: var(--muted);
-  font-size: 1.02rem;
-  margin-bottom: 18px;
+    line-height:1.9;
+    color:rgba(26,26,26,0.75);
+    margin-bottom:20px;
 }
 
 .meta{
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.6;
+    margin-top:30px;
+    padding-top:25px;
+    border-top:1px solid var(--border);
+    line-height:1.9;
+    color:rgba(26,26,26,0.75);
 }
 
 .main-visual{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
+    width:100%;
+    border-radius:8px;
+    display:block;
 }
 
-/* AVANT / APRES */
+/* AVANT APRES */
+
+.section-title{
+    font-family:Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-weight:400;
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
 .before-after{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
 }
 
 .card img{
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
+    width:100%;
+    display:block;
+    border-radius:8px;
 }
 
 .label{
-  margin-top: 12px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(26,26,26,0.65);
+    text-align:center;
+    margin-top:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:rgba(26,26,26,0.65);
+    font-size:0.85rem;
 }
 
-/* Responsive */
-@media (max-width: 950px){
-  main{ padding: 60px 20px 100px; }
-  header{ padding: 18px 20px; }
+/* CONTACT */
 
-  .top-layout{
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .before-after{
-    grid-template-columns: 1fr;
-  }
+.contact{
+    text-align:center;
+    padding:70px 20px;
+    margin-top:100px;
+    border-top:1px solid var(--border);
 }
+
+.contact h2{
+    font-family:Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-weight:400;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.contact p{
+    margin:10px 0;
+    color:rgba(26,26,26,0.75);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .top-layout{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .before-after{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:760px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    nav a{
+        margin-left:14px;
+        font-size:0.75rem;
+    }
+
+    .brand-name{
+        font-size:0.75rem;
+    }
+
+    main{
+        padding:60px 20px 100px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .section-title,
+    .contact h2{
+        font-size:1.7rem;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    <img src="logoLFB.png" alt="Logo LFB Studio" class="logo-small" />
-    LFB Studio
-  </a>
 
-  <nav>
-    <a href="apropos.html">À propos</a>
-    <a href="projets.html">Projets</a>
-    <a href="offre.html">Offre</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <a href="index.html" class="brand">
+        <img src="logoterra.jpg" alt="Logo LFB Studio" class="logo-small">
+        <span class="brand-name">LFB Studio</span>
+    </a>
+
+    <nav>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
 </header>
 
 <main>
-  <h1>Transformation d’une salle de bain</h1>
 
-  <div class="top-layout">
+    <h1>Transformation d’une salle de bain</h1>
 
-    <!-- TEXTE GAUCHE -->
-    <div class="desc">
-      <p>
-        Ce projet présente une proposition de rénovation d’une salle de bain située à Périgueux, imaginée afin de transformer une pièce datée en un espace plus contemporain et fonctionnel.
-La salle de bain d’origine présentait une esthétique typique des années 70, avec une faïence monochrome dans des tons saumon et un aménagement peu optimisé. La baignoire occupait une grande 
-        partie de la pièce et les équipements donnaient à l’ensemble un aspect sombre et vieillissant.
-      </p>
+    <div class="top-layout">
 
-      <p>
-       La proposition imaginée vise à moderniser l’espace tout en améliorant la sensation de volume et de luminosité. La baignoire est remplacée par une douche plus spacieuse, permettant de libérer 
-        visuellement la pièce. Un meuble vasque plus contemporain et un miroir rétroéclairé viennent compléter l’aménagement.
-      </p>
+        <div class="desc">
 
-      <p>
-Pour apporter du caractère à l’ensemble, une faïence verte chaleureuse habille désormais les murs et crée une ambiance à la fois élégante et apaisante.
-Ce projet illustre l’approche de LFB Studio, agence d’architecture d’intérieur intervenant à Périgueux et en Dordogne, qui consiste à révéler le potentiel des espaces existants grâce à des 
-        solutions d’aménagement adaptées aux usages actuels.
-      </p>
+            <p>
+                Ce projet présente une proposition de rénovation d’une salle de bain située à Périgueux, imaginée afin de transformer une pièce datée en un espace plus contemporain et fonctionnel. La salle de bain d’origine présentait une esthétique typique des années 70, avec une faïence monochrome dans des tons saumon et un aménagement peu optimisé.
+            </p>
 
-      <div class="meta">
-        <div><strong>Type :</strong> Projet de rénovation de salle de bain</div>
-        <div><strong>Pièce :</strong> Salle de bain</div>
-        <div><strong>Objectif :</strong> Modernisation et optimisation esthétique</div>
-         <div><strong>Localisation :</strong> Périgueux</div>
-      </div>
+            <p>
+                La baignoire occupait une grande partie de la pièce et les équipements donnaient à l’ensemble un aspect sombre et vieillissant. La proposition vise à moderniser l’espace tout en améliorant la sensation de volume et de luminosité.
+            </p>
+
+            <p>
+                La baignoire est remplacée par une douche plus spacieuse permettant de libérer visuellement la pièce. Un meuble vasque contemporain et un miroir rétroéclairé viennent compléter l’aménagement.
+            </p>
+
+            <p>
+                Pour apporter davantage de caractère, une faïence verte chaleureuse habille désormais les murs et crée une ambiance élégante et apaisante. Ce projet illustre la démarche de LFB Studio : révéler le potentiel des espaces existants grâce à des solutions adaptées aux usages actuels.
+            </p>
+
+            <div class="meta">
+                <div><strong>Type :</strong> Projet de rénovation de salle de bain</div>
+                <div><strong>Pièce :</strong> Salle de bain</div>
+                <div><strong>Objectif :</strong> Modernisation et optimisation esthétique</div>
+                <div><strong>Localisation :</strong> Périgueux</div>
+            </div>
+
+        </div>
+
+        <img src="SDBapres.jpg" alt="Salle de bain rénovée" class="main-visual">
+
     </div>
 
-    <!-- IMAGE PRINCIPALE DROITE -->
-    <img src="SDBapres.jpg" alt="Salle de bain après rénovation" class="main-visual">
+    <h2 class="section-title">Avant / Après</h2>
 
-  </div>
+    <div class="before-after">
 
-  <!-- AVANT / APRES -->
-  <div class="before-after">
+        <div class="card">
+            <img src="SDBavant.JPG" alt="Salle de bain avant">
+            <div class="label">Avant</div>
+        </div>
 
-    <div class="card">
-      <img src="SDBavant.JPG" alt="Salle de bain avant rénovation">
-      <div class="label">Avant</div>
+        <div class="card">
+            <img src="SDBapres.jpg" alt="Salle de bain après">
+            <div class="label">Après</div>
+        </div>
+
     </div>
-
-    <div class="card">
-      <img src="SDBapres.jpg" alt="Salle de bain après rénovation">
-      <div class="label">Après</div>
-    </div>
-
-  </div>
 
 </main>
+
+<section class="contact">
+
+    <h2>Contact</h2>
+
+    <p>📞 06 03 17 47 75</p>
+
+    <p>✉️ contactlfbstudio@gmail.com</p>
+
+</section>
 
 </body>
 </html>
