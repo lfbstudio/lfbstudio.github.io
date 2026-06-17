@@ -6,185 +6,269 @@
 <title>Projets — LFB Studio</title>
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 :root{
-  --warm-white:#f6f1e8;
-  --text-dark:#1a1a1a;
-  --muted:rgba(26,26,26,0.70);
-  --border:rgba(26,26,26,0.12);
+    --background:#faf5e6;
+    --text:#2b2b2b;
+    --terracotta:#94471D;
+    --border:#e7ddc9;
 }
 
 body{
-  font-family: Helvetica, Arial, sans-serif;
-  background: var(--warm-white);
-  color: var(--text-dark);
+    font-family: Helvetica, Arial, sans-serif;
+    background:var(--background);
+    color:var(--text);
 }
 
 /* HEADER */
+
 header{
-  position: sticky;
-  top:0;
-  width:100%;
-  padding:22px 50px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background: rgba(246,241,232,0.85);
-  backdrop-filter: blur(8px);
-  border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    width:100%;
+    padding:22px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(250,245,230,0.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    z-index:100;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  color:var(--text-dark);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:0.85rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:var(--terracotta);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:0.9rem;
 }
 
-.logo-small{ width:30px; }
+.logo-small{
+    width:40px;
+    height:auto;
+    display:block;
+}
 
 nav a{
-  margin-left:26px;
-  text-decoration:none;
-  color:var(--text-dark);
-  font-size:0.85rem;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  opacity:0.85;
-  transition:opacity .2s;
+    margin-left:26px;
+    text-decoration:none;
+    color:rgba(26,26,26,0.80);
+    font-size:0.85rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:.2s;
 }
 
-nav a:hover{ opacity:0.55; }
+nav a:hover{
+    opacity:.6;
+}
+
+/* CONTENU */
 
 main{
-  max-width:1200px;
-  margin:0 auto;
-  padding:90px 50px 120px;
+    max-width:1250px;
+    margin:auto;
+    padding:80px 50px 100px;
 }
 
 h1{
-  font-weight:400;
-  letter-spacing:1px;
-  margin-bottom:50px;
-  font-size:2rem;
+    font-family: Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-size:2.8rem;
+    font-weight:400;
+    margin-bottom:60px;
 }
 
 /* GRILLE */
 
 .grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
 }
 
 .project{
-  position:relative;
-  overflow:hidden;
-  cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    text-decoration:none;
 }
 
 .project img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  transition: transform .4s ease;
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
 }
 
 .project:hover img{
-  transform: scale(1.05);
-}
-
-/* Overlay titre */
-.project-title{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  color:white;
-  font-size:1rem;
-  letter-spacing:1px;
-  z-index:2;
+    transform:scale(1.05);
 }
 
 .project::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.25);
-  transition:background .3s;
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.25);
+    transition:.3s;
 }
 
 .project:hover::after{
-  background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.40);
 }
 
-/* Responsive */
+.project-title{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    color:white;
+    font-size:1rem;
+    letter-spacing:1px;
+    z-index:2;
+}
+
+/* CONTACT */
+
+.contact{
+    margin-top:100px;
+    padding-top:60px;
+    border-top:1px solid var(--border);
+    text-align:center;
+}
+
+.contact h2{
+    font-family:Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-weight:400;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.contact p{
+    margin:10px 0;
+    color:rgba(26,26,26,0.75);
+}
+
+/* RESPONSIVE */
+
 @media(max-width:900px){
-  .grid{ grid-template-columns: repeat(2,1fr); }
+
+    header{
+        padding:18px 20px;
+    }
+
+    main{
+        padding:60px 20px 80px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .project img{
+        height:350px;
+    }
+
+    h1{
+        font-size:2.2rem;
+    }
+
 }
 
-@media(max-width:600px){
-  .grid{ grid-template-columns:1fr; }
+@media(max-width:760px){
+
+    nav a{
+        margin-left:14px;
+        font-size:0.75rem;
+    }
+
+    .brand{
+        font-size:0.75rem;
+    }
+
+    .logo-small{
+        width:32px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    <img src="logoLFB2.png" class="logo-small">
-    LFB Studio
-  </a>
 
-  <nav>
-    <a href="apropos.html">À propos</a>
-    <a href="projets.html">Projets</a>
-    <a href="offre.html">Offre</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <a class="brand" href="index.html">
+        <img src="logoLFB2.png" alt="Logo LFB Studio" class="logo-small">
+        LFB Studio
+    </a>
+
+    <nav>
+        <a href="apropos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
 </header>
 
 <main>
-  <h1>Projets</h1>
 
-  <div class="grid">
+    <h1>Projets</h1>
 
-    <a href="projet1.html" class="project">
-      <img src="SDBapres.jpg">
-      <div class="project-title">Salle de bain chaleureuse</div>
-    </a>
+    <div class="grid">
 
-    <a href="projet2.html" class="project">
-      <img src="mid1b.jpg">
-      <div class="project-title">Séjour et cuisine ouverte</div>
-    </a>
+        <a href="projet1.html" class="project">
+            <img src="SDBapres.jpg" alt="">
+            <div class="project-title">Salle de bain chaleureuse</div>
+        </a>
 
-    <a href="projet3.html" class="project">
-      <img src="sam3.jpg">
-      <div class="project-title">Rénovation d'une longère</div>
-    </a>
+        <a href="projet2.html" class="project">
+            <img src="mid1b.jpg" alt="">
+            <div class="project-title">Séjour & cuisine ouverte</div>
+        </a>
 
-    <a href="projet4.html" class="project">
-      <img src="cusine noir.jpg">
-      <div class="Aménagement d'une cuisine">Aménagement d'une cuisine</div>
-    </a>
+        <a href="projet3.html" class="project">
+            <img src="sam3.jpg" alt="">
+            <div class="project-title">Réhabilitation d'une longère</div>
+        </a>
 
-    <a href="projet5.html" class="project">
-      <img src="projet5.jpg">
-      <div class="project-title">Projet 05</div>
-    </a>
+        <a href="projet4.html" class="project">
+            <img src="cusine noir.jpg" alt="">
+            <div class="project-title">Aménagement d'une cuisine</div>
+        </a>
 
-    <a href="projet6.html" class="project">
-      <img src="projet6.jpg">
-      <div class="project-title">Projet 06</div>
-    </a>
+        <a href="projet5.html" class="project">
+            <img src="projet5.jpg" alt="">
+            <div class="project-title">Projet 05</div>
+        </a>
 
-  </div>
+        <a href="projet6.html" class="project">
+            <img src="projet6.jpg" alt="">
+            <div class="project-title">Projet 06</div>
+        </a>
+
+    </div>
+
+    <section class="contact">
+
+        <h2>Contact</h2>
+
+        <p>📞 06 03 XX XX XX</p>
+        <p>✉️ contactlfbstudio@gmail.com</p>
+
+    </section>
 
 </main>
 
