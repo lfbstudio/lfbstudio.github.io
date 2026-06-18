@@ -1,289 +1,344 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rénovation d'un séjour — LFBStudio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Séjour & cuisine ouverte — LFB Studio</title>
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 :root{
-  --warm-white:#f6f1e8;
-  --text-dark:#1a1a1a;
-  --muted:rgba(26,26,26,0.70);
-  --border:rgba(26,26,26,0.12);
+    --background:#faf5e6;
+    --text:#2b2b2b;
+    --terracotta:#94471D;
+    --border:#e7ddc9;
 }
 
 body{
-  font-family: Helvetica, Arial, sans-serif;
-  background: var(--warm-white);
-  color: var(--text-dark);
+    font-family:Helvetica, Arial, sans-serif;
+    background:var(--background);
+    color:var(--text);
 }
 
 /* HEADER */
+
 header{
-  position: sticky;
-  top:0;
-  width:100%;
-  padding:22px 50px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background: rgba(246,241,232,0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(250,245,230,0.95);
+    backdrop-filter:blur(8px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 50px;
+    border-bottom:1px solid var(--border);
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  color: var(--text-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
-.logo-small{ width:30px; }
+.logo-small{
+    width:38px;
+    height:auto;
+}
+
+.brand-name{
+    color:var(--terracotta);
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
 
 nav a{
-  margin-left:26px;
-  text-decoration:none;
-  color: var(--text-dark);
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.85;
-  transition: opacity .2s ease;
+    margin-left:26px;
+    text-decoration:none;
+    color:rgba(26,26,26,0.8);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:0.85rem;
+    transition:.2s;
 }
-nav a:hover{ opacity: 0.55; }
+
+nav a:hover{
+    opacity:.6;
+}
 
 /* PAGE */
+
 main{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 70px 50px 120px;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 50px 120px;
+}
+
+h1,
+h2{
+    font-family:Georgia, "Times New Roman", serif;
+    color:var(--terracotta);
+    font-weight:400;
 }
 
 h1{
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  font-size: 2rem;
+    font-size:2.6rem;
+    margin-bottom:20px;
 }
 
 .subtitle{
-  color: var(--muted);
-  line-height: 1.7;
-  max-width: 900px;
-  margin-bottom: 60px;
+    color:rgba(26,26,26,0.75);
+    line-height:1.8;
+    max-width:900px;
+    margin-bottom:70px;
 }
 
-/* TOP LAYOUT */
+/* INTRO */
+
 .top-layout{
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: start;
-  margin-bottom: 80px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:60px;
+    margin-bottom:90px;
+    align-items:start;
 }
 
 .desc p{
-  line-height: 1.75;
-  color: var(--muted);
-  font-size: 1.02rem;
-  margin-bottom: 18px;
+    line-height:1.9;
+    color:rgba(26,26,26,0.75);
+    margin-bottom:18px;
 }
 
 .meta{
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.6;
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    line-height:1.8;
+    color:rgba(26,26,26,0.75);
 }
 
 .main-visual{
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
+    width:100%;
+    border-radius:8px;
+    display:block;
 }
 
-/* PLAN SECTION */
+/* PLAN */
+
 .plan-section{
-  text-align: center;
-  margin-bottom: 90px;
+    margin-bottom:100px;
+    text-align:center;
 }
 
 .plan-section h2{
-  font-weight: 400;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
+    margin-bottom:30px;
 }
 
 .plan-section img{
-  width: 80%;
-  max-width: 950px;
-  height: auto;
-  border-radius: 6px;
+    width:85%;
+    max-width:950px;
+    border-radius:8px;
 }
 
 /* SECTIONS */
+
 .section{
-  margin-bottom: 80px;
+    margin-bottom:90px;
 }
 
 .section h2{
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
+    margin-bottom:20px;
 }
 
 .section p{
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 25px;
-  max-width: 900px;
+    line-height:1.9;
+    color:rgba(26,26,26,0.75);
+    margin-bottom:25px;
+    max-width:900px;
 }
 
-/* GRID IMAGES */
+/* GALERIE */
+
 .grid-3{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
 .grid-3 img{
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px){
-  .top-layout{
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .grid-3{
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* FOOTER */
+
+.contact{
+    text-align:center;
+    padding:80px 20px;
+    border-top:1px solid var(--border);
 }
 
-@media (max-width: 650px){
-  main{ padding: 60px 20px 100px; }
-  header{ padding: 18px 20px; }
-  nav a{ margin-left: 14px; font-size: 0.75rem; }
-  .brand{ font-size: 0.75rem; }
-
-  .grid-3{
-    grid-template-columns: 1fr;
-  }
-
-  .plan-section img{
-    width: 100%;
-  }
+.contact h2{
+    margin-bottom:25px;
 }
+
+.contact p{
+    margin:10px 0;
+    color:rgba(26,26,26,0.75);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.top-layout{
+    grid-template-columns:1fr;
+}
+
+.grid-3{
+    grid-template-columns:1fr;
+}
+
+main{
+    padding:60px 20px 100px;
+}
+
+header{
+    padding:18px 20px;
+}
+
+nav a{
+    margin-left:14px;
+    font-size:0.75rem;
+}
+
+.plan-section img{
+    width:100%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    <img src="logoLFB2.png" alt="Logo LFBStudio" class="logo-small" />
-    LpStudio
-  </a>
 
-  <nav>
+<a class="brand" href="index.html">
+    <img src="logoterra.jpg" alt="Logo LFB Studio" class="logo-small">
+    <span class="brand-name">LFB Studio</span>
+</a>
+
+<nav>
     <a href="apropos.html">À propos</a>
     <a href="projets.html">Projets</a>
-    <a href="offre.html">Offre</a>
     <a href="contact.html">Contact</a>
-  </nav>
+</nav>
+
 </header>
 
 <main>
 
 <h1>Séjour & cuisine ouverte</h1>
+
 <p class="subtitle">
 Ce projet présente deux propositions d’aménagement d’un séjour situé à Trélissac, imaginées afin d’explorer différentes ambiances pour un même espace de vie.
 </p>
 
 <div class="top-layout">
 
-  <!-- TEXTE GAUCHE -->
-  <div class="desc">
-    <p>
-      L’objectif était de repenser l’organisation et l’atmosphère du salon tout en conservant la même configuration spatiale. À partir d’un même volume et d’un même 
-  aménagement, deux directions esthétiques ont été développées afin d’illustrer comment le choix du mobilier, des matériaux et des couleurs peut transformer la perception d’un espace.
-    </p>
+<div class="desc">
 
-    <p>
-    Ce projet met en lumière l’importance des choix esthétiques dans l’architecture d’intérieur : à partir d’un même espace, différentes ambiances peuvent être imaginées pour répondre aux 
-      préférences et au mode de vie des occupants.
+<p>
+L’objectif était de repenser l’organisation et l’atmosphère du salon tout en conservant la même configuration spatiale. À partir d’un même volume et d’un même aménagement, deux directions esthétiques ont été développées afin d’illustrer comment le choix du mobilier, des matériaux et des couleurs peut transformer la perception d’un espace.
+</p>
 
-Cette démarche illustre l’approche de LFB Studio, agence d’architecture d’intérieur intervenant à Trélissac, Périgueux et en Dordogne, qui consiste à concevoir des espaces à la fois fonctionnels, 
-      harmonieux et adaptés aux usages du quotidien.
-    </p>
+<p>
+Ce projet met en lumière l’importance des choix esthétiques dans l’architecture d’intérieur. À partir d’un même espace, différentes ambiances peuvent être imaginées afin de répondre aux préférences et au mode de vie des occupants.
+</p>
 
-    <div class="meta">
-      <div><strong>Type :</strong> Conception d’espace</div>
-      <div><strong>Livrables :</strong> Plan + perspectives 3D</div>
-      <div><strong>Deux styles :</strong> Mid-century / Scandinave contemporain</div>
-       <div><strong>Localisation :</strong> Trélissac</div>
-    </div>
-  </div>
+<p>
+Cette démarche illustre l’approche de LFB Studio qui consiste à concevoir des espaces fonctionnels, harmonieux et adaptés aux usages du quotidien.
+</p>
 
-  <!-- IMAGE PRINCIPALE DROITE -->
-  <img src="mid1b.jpg" alt="Proposition mid-century principale" class="main-visual">
+<div class="meta">
+<div><strong>Type :</strong> Conception d’espace</div>
+<div><strong>Livrables :</strong> Plan + perspectives 3D</div>
+<div><strong>Deux styles :</strong> Mid-century / Scandinave contemporain</div>
+<div><strong>Localisation :</strong> Trélissac</div>
+</div>
 
 </div>
 
-<!-- PLAN -->
+<img src="mid1b.jpg" alt="" class="main-visual">
+
+</div>
+
 <div class="plan-section">
-  <h2>Plan d’aménagement</h2>
-  <img src="plansejour.png" alt="Plan du séjour avec cuisine ouverte">
+
+<h2>Plan d'aménagement</h2>
+
+<img src="plansejour.png" alt="Plan d'aménagement">
+
 </div>
 
-<!-- PROPOSITION 1 -->
 <section class="section">
-  <h2>Proposition 01 — Mid-century</h2>
-  <p>
-   La première proposition s’inspire du style mid-century, avec un mobilier aux lignes épurées, des matériaux chaleureux et une palette de 
-    couleurs équilibrée qui évoque l’élégance intemporelle du design des années 50 et 60.
-  </p>
 
-  <div class="grid-3">
-    <img src="mid1b.jpg" alt="">
-    <img src="mid2b.jpg" alt="">
-    <img src="mid3b.jpg" alt="">
-  </div>
+<h2>Proposition 01 — Mid-century</h2>
+
+<p>
+Cette première proposition s’inspire du design mid-century. Les lignes sont épurées, les matériaux chaleureux et les teintes soigneusement équilibrées afin de créer une ambiance élégante et intemporelle inspirée des années 50 et 60.
+</p>
+
+<div class="grid-3">
+<img src="mid1b.jpg" alt="">
+<img src="mid2b.jpg" alt="">
+<img src="mid3b.jpg" alt="">
+</div>
+
 </section>
 
-<!-- PROPOSITION 2 -->
 <section class="section">
-  <h2>Proposition 02 — Scandinave contemporain</h2>
-  <p>
-   La seconde proposition adopte une ambiance plus cocooning dans un style scandinave contemporain, privilégiant des textures douces, des teintes apaisantes et un aménagement pensé 
-    pour créer une atmosphère confortable et chaleureuse.
-  </p>
 
-  <div class="grid-3">
-    <img src="scan1b.jpg" alt="">
-    <img src="scan2b.jpg" alt="">
-    <img src="scan3b.jpg" alt="">
-  </div>
+<h2>Proposition 02 — Scandinave contemporain</h2>
+
+<p>
+La seconde proposition adopte une esthétique plus douce et cocooning. Les matières naturelles, les couleurs claires et les textures chaleureuses contribuent à créer un espace confortable, lumineux et accueillant.
+</p>
+
+<div class="grid-3">
+<img src="scan1b.jpg" alt="">
+<img src="scan2b.jpg" alt="">
+<img src="scan3b.jpg" alt="">
+</div>
+
 </section>
 
 </main>
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<p>📞 06 03 17 47 75</p>
+
+<p>✉️ contactlfbstudio@gmail.com</p>
+
+</section>
 
 </body>
 </html>
