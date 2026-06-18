@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aménagement d’une cuisine — LFB Studio</title>
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -13,31 +14,33 @@
 }
 
 :root{
-  --warm-white:#f6f1e8;
-  --text-dark:#1a1a1a;
-  --muted:rgba(26,26,26,0.72);
-  --border:rgba(26,26,26,0.12);
+  --background:#faf5e6;
+  --text:#2b2b2b;
+  --terracotta:#94471D;
+  --muted:rgba(43,43,43,0.72);
+  --border:#e7ddc9;
 }
 
 body{
-  font-family: Helvetica, Arial, sans-serif;
-  background: var(--warm-white);
-  color: var(--text-dark);
+  font-family:Helvetica, Arial, sans-serif;
+  background:var(--background);
+  color:var(--text);
 }
 
 /* HEADER */
+
 header{
-  position: sticky;
+  position:sticky;
   top:0;
   width:100%;
   padding:22px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background: rgba(246,241,232,0.88);
-  backdrop-filter: blur(8px);
+  background:rgba(250,245,230,0.92);
+  backdrop-filter:blur(8px);
   border-bottom:1px solid var(--border);
-  z-index:10;
+  z-index:100;
 }
 
 .brand{
@@ -45,60 +48,60 @@ header{
   align-items:center;
   gap:12px;
   text-decoration:none;
-  color:var(--text-dark);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:0.85rem;
+  color:var(--terracotta);
+  font-size:1rem;
+  letter-spacing:1px;
+  font-family:Georgia, serif;
 }
 
 .logo-small{
   width:38px;
   height:auto;
-  display:block;
 }
 
 nav a{
   margin-left:26px;
   text-decoration:none;
-  color:var(--text-dark);
+  color:rgba(26,26,26,0.8);
   font-size:0.85rem;
   letter-spacing:1px;
   text-transform:uppercase;
-  opacity:0.85;
-  transition:opacity .2s ease;
+  transition:0.2s;
 }
 
 nav a:hover{
-  opacity:0.55;
+  opacity:0.6;
 }
 
 /* PAGE */
+
 main{
   max-width:1200px;
-  margin:0 auto;
-  padding:70px 50px 120px;
+  margin:auto;
+  padding:80px 50px 120px;
 }
 
 h1{
+  color:var(--terracotta);
+  font-family:Georgia, serif;
   font-weight:400;
-  letter-spacing:1px;
-  margin-bottom:40px;
-  font-size:2rem;
+  font-size:2.4rem;
+  margin-bottom:45px;
 }
 
-/* TOP SECTION */
+/* TOP */
+
 .top-layout{
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
   gap:60px;
   align-items:start;
-  margin-bottom:80px;
+  margin-bottom:90px;
 }
 
 .desc p{
-  line-height:1.8;
+  line-height:1.9;
   color:var(--muted);
-  font-size:1.02rem;
   margin-bottom:18px;
 }
 
@@ -106,19 +109,18 @@ h1{
   margin-top:25px;
   padding-top:20px;
   border-top:1px solid var(--border);
-  font-size:0.95rem;
+  line-height:1.8;
   color:var(--muted);
-  line-height:1.7;
 }
 
 .main-visual{
   width:100%;
-  height:auto;
   border-radius:8px;
   display:block;
 }
 
-/* AVANT / APRES */
+/* GALERIE */
+
 .gallery{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -127,22 +129,44 @@ h1{
 
 .card img{
   width:100%;
-  height:420px; /* même hauteur pour toutes */
+  height:420px;
   object-fit:cover;
-  display:block;
   border-radius:8px;
+  display:block;
 }
 
 .label{
   margin-top:12px;
-  font-size:0.85rem;
   text-transform:uppercase;
   letter-spacing:1px;
-  color:rgba(26,26,26,0.60);
+  font-size:0.8rem;
+  color:rgba(43,43,43,0.6);
+}
+
+/* CONTACT */
+
+.contact{
+  text-align:center;
+  padding:80px 20px;
+  border-top:1px solid var(--border);
+  margin-top:100px;
+}
+
+.contact h2{
+  font-family:Georgia, serif;
+  color:var(--terracotta);
+  font-weight:400;
+  margin-bottom:25px;
+}
+
+.contact p{
+  margin:10px 0;
+  color:var(--muted);
 }
 
 /* RESPONSIVE */
-@media (max-width:950px){
+
+@media(max-width:950px){
 
   main{
     padding:60px 20px 100px;
@@ -163,7 +187,7 @@ h1{
 
 }
 
-@media (max-width:760px){
+@media(max-width:760px){
 
   nav a{
     margin-left:14px;
@@ -171,10 +195,15 @@ h1{
   }
 
   .brand{
-    font-size:0.75rem;
+    font-size:0.9rem;
+  }
+
+  h1{
+    font-size:2rem;
   }
 
 }
+
 </style>
 </head>
 
@@ -183,14 +212,13 @@ h1{
 <header>
 
   <a class="brand" href="index.html">
-    <img src="logoLFB.png" alt="Logo LFB Studio" class="logo-small" />
+    <img src="logoterra.jpg" alt="Logo LFB Studio" class="logo-small">
     LFB Studio
   </a>
 
   <nav>
     <a href="apropos.html">À propos</a>
     <a href="projets.html">Projets</a>
-    <a href="offre.html">Offre</a>
     <a href="contact.html">Contact</a>
   </nav>
 
@@ -198,63 +226,69 @@ h1{
 
 <main>
 
-  <h1>Aménagement d’une cuisine</h1>
+<h1>Aménagement d’une cuisine</h1>
 
-  <div class="top-layout">
+<div class="top-layout">
 
-    <!-- TEXTE -->
-    <div class="desc">
+  <div class="desc">
 
-      <p>
-        Ce projet avait pour objectif de repenser une cuisine manquant de personnalité et de fonctionnalité, tout en tirant parti d’une importante hauteur sous plafond.
-      </p>
+    <p>
+      Ce projet avait pour objectif de repenser une cuisine manquant de personnalité et de fonctionnalité, tout en tirant parti d’une importante hauteur sous plafond.
+    </p>
 
-      <p>
-        L’enjeu principal consistait à structurer l’espace afin de créer une cuisine plus chaleureuse, plus harmonieuse et mieux adaptée au quotidien des occupants. Le projet s’est articulé autour d’un travail sur les volumes, les matériaux et les rangements afin d’optimiser chaque zone de manière cohérente.
-      </p>
+    <p>
+      L’enjeu principal consistait à structurer l’espace afin de créer une cuisine plus chaleureuse, plus harmonieuse et mieux adaptée au quotidien des occupants. Le projet s’est articulé autour d’un travail sur les volumes, les matériaux et les rangements afin d’optimiser chaque zone de manière cohérente.
+    </p>
 
-      <p>
-        La grande hauteur sous plafond a été exploitée pour apporter davantage de caractère à la pièce et renforcer la sensation d’espace, tout en intégrant des solutions de rangement plus généreuses et mieux pensées.
-      </p>
+    <p>
+      La grande hauteur sous plafond a été exploitée pour apporter davantage de caractère à la pièce et renforcer la sensation d’espace, tout en intégrant des solutions de rangement plus généreuses et mieux pensées.
+    </p>
 
-      <p>
-        L’objectif était de concevoir une cuisine à la fois esthétique, pratique et accueillante, capable de devenir un véritable espace de vie au cœur du logement.
-      </p>
+    <p>
+      L’objectif était de concevoir une cuisine à la fois esthétique, pratique et accueillante, capable de devenir un véritable espace de vie au cœur du logement.
+    </p>
 
-      <div class="meta">
-        <div><strong>Type :</strong> Aménagement intérieur</div>
-        <div><strong>Pièce :</strong> Cuisine</div>
-        <div><strong>Style :</strong> Contemporain chaleureux</div>
-      </div>
-
-    </div>
-
-    <!-- IMAGE PRINCIPALE -->
-    <img src="cusine noir.jpg" alt="Cuisine aménagée" class="main-visual">
-
-  </div>
-
-  <!-- GALERIE -->
-  <div class="gallery">
-
-    <div class="card">
-      <img src="Cuisine avant1.jpg" alt="Cuisine avant">
-      <div class="label">Avant</div>
-    </div>
-
-    <div class="card">
-      <img src="cusine noir.jpg" alt="Cuisine après">
-      <div class="label">Après — vue 01</div>
-    </div>
-
-    <div class="card">
-      <img src="Cuisine apres 2.png" alt="Cuisine après vue 02">
-      <div class="label">Après — vue 02</div>
+    <div class="meta">
+      <div><strong>Type :</strong> Aménagement intérieur</div>
+      <div><strong>Pièce :</strong> Cuisine</div>
+      <div><strong>Style :</strong> Contemporain chaleureux</div>
     </div>
 
   </div>
+
+  <img src="cusine noir.jpg" alt="Cuisine aménagée" class="main-visual">
+
+</div>
+
+<div class="gallery">
+
+  <div class="card">
+    <img src="Cuisine avant1.jpg" alt="Cuisine avant">
+    <div class="label">Avant</div>
+  </div>
+
+  <div class="card">
+    <img src="cusine noir.jpg" alt="Cuisine après">
+    <div class="label">Après — vue 01</div>
+  </div>
+
+  <div class="card">
+    <img src="Cuisine apres 2.png" alt="Cuisine après vue 02">
+    <div class="label">Après — vue 02</div>
+  </div>
+
+</div>
 
 </main>
+
+<section class="contact">
+
+  <h2>Contact</h2>
+
+  <p>📞 06 03 17 47 75</p>
+  <p>✉️ contactlfbstudio@gmail.com</p>
+
+</section>
 
 </body>
 </html>
